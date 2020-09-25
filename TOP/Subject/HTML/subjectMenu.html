@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　科目メニュー</title>
+    <link rel="stylesheet" href="./CSS/subjectMenu.css">
+</head>
+
+<body>
+    <form action="subjectMenu.php" method="post">
+        <header>
+            <a href="./../maink.php"><img class="icon" src="./../png/icon.png" width="450" height="90"></a>
+        </header>
+        <h1>科目メニュー</h1>
+        <table border="1">
+            <tr>
+                <th>教科ID</th>
+                <th>教科名</th>
+            </tr>
+            <?php
+            foreach ($res as $ress) {
+            ?>
+            <tr>
+                <td><?php echo $ress["sub_id"] ?></td>
+                <td><?php echo $ress["sub_name"] ?></td>
+            </tr>
+            <?php
+            }
+            ?>
+        </table>
+        <input type="submit" value="登録" class="button1" name="regi">
+        <input type="submit" value="編集" class="button2" name="edit">
+        <input type="submit" value="戻る" class="button3" name="back">
+    </form>
+</body>
+
+</html>

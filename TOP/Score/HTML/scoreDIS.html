@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　成績メニュー</title>
+    <link rel="stylesheet" href="./CSS/scoreDIS.css">
+</head>
+
+<body>
+    <form action="scoreDIS.php" method="POST">
+        <header>
+            <a href="./../mains.php"><img class="icon" src="./../png/icon.png" width="450" height="90"></a>
+        </header>
+        <h1>成績メニュー</h1>
+        <table border="1">
+            <tr>
+                <th>ユーザ名</th>
+                <th>教科ID</th>
+                <th>評価</th>
+                <th>単位</th>
+                <th>授業態度</th>
+                <th>欠席日数</th>
+            </tr>
+            <?php
+            foreach ($res as $ress) {
+            ?>
+            <tr>
+                <td><?php echo $ress["user_name"] ?></td>
+                <td><?php echo $ress["sub_name"] ?></td>
+                <td><?php echo $ress["rating"] ?></td>
+                <td><?php echo $ress["credit"] ?></td>
+                <td><?php echo $ress["attitude"] ?></td>
+                <td><?php echo $ress["absence"] ?></td>
+            </tr>
+            <?php
+            }
+            ?>
+        </table>
+        <input type="submit" value="メインメニューに戻る" class="button1" name="menu">
+    </form>
+</body>
+
+</html>

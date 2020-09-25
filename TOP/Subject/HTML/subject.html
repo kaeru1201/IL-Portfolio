@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>成績管理システム 成績登録</title>
+    <link rel="stylesheet" href="./CSS/subject.css">
+
+</head>
+
+<body>
+    <form action="subject.php" method="post">
+        <header>
+            <a href="./../maink.php"><img class="icon" src="./../png/icon.png" width="450" height="90"></a>
+        </header>
+        <div class="cp_iptxt">
+            <p>教科名 ：<input type="text" name="sub_name"></p>
+            <p>* ... 15文字以内で入力してください。</p>
+        </div>
+
+        <div class="erm_text">
+            <?php echo $erm ?>
+        </div>
+        <input type="submit" value="登録" class="button1" name="regi">
+        <input type="submit" value="キャンセル" class="button2" name="canc">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　アカウント設定</title>
+    <link rel="stylesheet" href="./CSS/acDele.css">
+</head>
+
+<body>
+    <form action="acDele.php" method="POST">
+        <header>
+            <a href="./../maink.php"><img class="icon" src="./../png/icon.png" width="450" height="90"></a>
+        </header>
+        <h1>アカウント削除</h1>
+        <table border="1">
+            <tr>
+                <th></th>
+                <th>アカウント名</th>
+            </tr>
+            <?php
+            foreach ($res as $ress) {
+            ?>
+            <tr>
+                <td><input type="radio" name="cs" value="<?php echo $ress["user_name"] ?>">
+                <td><?php echo $ress["user_name"] ?></td>
+                </td>
+            </tr>
+            <?php
+            }
+            ?>
+        </table>
+        <div class="msg_text">
+            <p><?php echo $msg ?></p>
+        </div>
+        <input type="submit" value="削除する" class="button1" name="dele">
+        <input type="submit" value="キャンセル" class="button2" name="canc">
+    </form>
+</body>
+
+</html>

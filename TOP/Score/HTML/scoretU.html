@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　成績メニュー</title>
+    <link rel="stylesheet" href="./CSS/scoret.css" ;>
+</head>
+
+<body>
+    <form action="scoretU.php" method="POST">
+        <header>
+            <a href="./../maink.php"><img class="icon" src="./../png/icon.png" width="450" height="90"></a>
+        </header>
+        <p>生徒ID : <select name='user_dn'>
+                <?php
+                echo $user_list;
+                ?>
+            </select>
+        </p>
+
+        <p>教科ID : <select name="sub_dn">
+                <?php
+                echo $sub_list;
+                ?>
+            </select>
+        </p>
+
+        <p>評定 : <select name="rating">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+        </p>
+
+        <p>単位 : <input type="text" name="credit"> *</p>
+
+        <p>授業態度 : <select name="attitude">
+                <option value="〇">〇</option>
+                <option value="△">△</option>
+                <option value="×">×</option>
+            </select>
+        </p>
+
+        <p>欠席日数 : <input type="text" name="absence"> *</p>
+        <p>* ... 5桁以内の数字で入力してください。</p>
+
+        <div class="erm_text">
+            <?php echo $erm ?>
+        </div>
+
+        <input type="submit" value="更新" class="button1" name="upd">
+        <input type="submit" value="キャンセル" class="button2" name="canc">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>成績管理システム 成績登録</title>
+    <link rel="stylesheet" href="./CSS/scoretS.css">
+
+</head>
+
+<body>
+    <form action="scoretS.php" method="post">
+        <header>
+            <a href="./../maink.php"><img class="icon" src="./../png/icon.png" width="450" height="90"></a>
+        </header>
+        <p>成績を登録しました。</p>
+        <div class="msg_text">
+            <?php echo $msg ?>
+            <?php echo $erm ?>
+        </div>
+        <input type="submit" value="科目画面に遷移する" class="button1" name="sub">
+        <input type="submit" value="成績画面に遷移する" class="button2" name="gra">
+        <input type="submit" value="メインメニューに戻る" class="button3" name="menu">
+    </form>
+</body>
+
+</html>

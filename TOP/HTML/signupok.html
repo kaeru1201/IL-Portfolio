@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　新規登録</title>
+    <link rel="stylesheet" href="./CSS/signupok.css">
+</head>
+
+<body>
+    <form action="signupok.php" method="post">
+        <header>
+            <a href="./top.html"><img class="icon" src="./png/icon.png" width="450" height="90"></a>
+        </header>
+        <div class="msg_text">
+            <p>アカウントを作成しました。</p>
+            <p>アカウント名：<?php echo $name ?></p>
+        </div>
+        <input type="submit" value="ログイン" class="button1" name="signin">
+        <input type="submit" value="TOPに戻る" class="button2" name="top">
+    </form>
+</body>
+
+</html>

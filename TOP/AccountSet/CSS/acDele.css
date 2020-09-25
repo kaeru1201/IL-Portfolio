@@ -1,0 +1,80 @@
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #ffad41;
+    align-items: center;
+}
+
+.icon {
+    float: left;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.msg_text {
+    text-align: center;
+    font-weight: bold;
+    color: #ff0008;
+}
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+table th {
+    color: rgb(39, 37, 201);
+    background: #4dbde9;
+}
+
+table tr {
+    color: rgb(59, 59, 59);
+}
+
+.button1 {
+    display: inline-block;
+    border-radius: 20%;
+    font-size: 13pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 4px;
+    background: #595959;
+    color: #ffffff;
+    line-height: 1em;
+    opacity: 0.9;
+    transition: .3s;
+    box-shadow: 2px 2px 3px #666666;
+    margin: 0 0 0 85%;
+}
+
+.button1:hover {
+    box-shadow: none;
+    opacity: 1;
+}
+
+.button2 {
+    display: inline-block;
+    border-radius: 20%;
+    font-size: 13pt;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 4px;
+    background: #595959;
+    color: #ffffff;
+    line-height: 1em;
+    opacity: 0.9;
+    transition: .3s;
+    box-shadow: 2px 2px 3px #666666;
+}
+
+.button2:hover {
+    box-shadow: none;
+    opacity: 1;
+}

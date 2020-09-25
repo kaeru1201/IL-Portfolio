@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　成績メニュー</title>
+    <link rel="stylesheet" href="./CSS/scoretE.css">
+
+<body>
+    <form action="scoretE.php" method="POST">
+        <header>
+            <a href="./../maink.php"><img class="icon" src="./../png/icon.png" width="450" height="90"></a>
+        </header>
+        <h1>成績編集</h1>
+        <table border="1">
+            <tr>
+                <th></th>
+                <th>成績ID</th>
+                <th>ユーザID</th>
+                <th>教科ID</th>
+                <th>評価</th>
+                <th>単位</th>
+                <th>授業態度</th>
+                <th>欠席日数</th>
+            </tr>
+            <?php
+            foreach ($res as $ress) {
+            ?>
+            <tr>
+                <td><input type="radio" name="cs" value="<?php echo $ress["score_id"] ?>">
+                <td><?php echo $ress["score_id"] ?></td>
+                <td><?php echo $ress["user_name"] ?></td>
+                <td><?php echo $ress["sub_name"] ?></td>
+                <td><?php echo $ress["rating"] ?></td>
+                <td><?php echo $ress["credit"] ?></td>
+                <td><?php echo $ress["attitude"] ?></td>
+                <td><?php echo $ress["absence"] ?></td>
+            </tr>
+            <?php
+            }
+            ?>
+        </table>
+        <div class="msg_text">
+            <?php echo $msg ?>
+            <?php echo $erm ?>
+        </div>
+        <input type="submit" value="編集" class="button1" name="edit">
+        <input type="submit" value="削除" class="button2" name="dele">
+        <input type="submit" value="戻る" class="button3" name="canc">
+    </form>
+</body>
+</head>
+
+</html>

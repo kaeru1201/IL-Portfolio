@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　新規登録</title>
+    <link rel="stylesheet" href="./CSS/signup.css">
+</head>
+
+<body>
+    <form action="signup.php" method="post">
+        <header>
+            <a href="./top.html"><img class="icon" src="./png/icon.png" width="450" height="90"></a>
+        </header>
+        <div class="cp_iptxt">
+            <p>ユーザー名：</p>
+            <input type="text" name="user_name">
+        </div>
+        <div class="cp_ippasswd">
+            <p>パスワード：</p>
+            <input type="password" name="password">
+            <p>パスワードを再入力：</p>
+            <input type="password" name="password2">
+        </div>
+        <div class="memomemo">
+            <p>*... 「<,>,?」などの特殊文字は使用できません。</p>
+        </div>
+        <div class="erm_text">
+            <p><?php echo $erm ?></p>
+        </div>
+        <input type="submit" value="登録" class="button1" name="signup">
+        <input type="submit" value="ログイン画面にいく" class="button2" name="login">
+    </form>
+</body>
+
+</html>

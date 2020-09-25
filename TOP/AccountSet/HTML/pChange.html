@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>成績管理システム　アカウント設定</title>
+    <link rel="stylesheet" href="./CSS/pChange.css">
+</head>
+
+<body>
+    <form action="pChange.php" method="POST">
+        <header>
+            <img class="icon" src="./../png/icon.png" width="450" height="90">
+        </header>
+        <h1>パスワード変更</h1>
+        <div class="cp_ippasswd">
+            <p>現在のパスワード：</p>
+            <input type="password" name="password0">
+            <p>新しいパスワード：</p>
+            <input type="password" name="password">
+            <p>新しいパスワードを再入力：</p>
+            <input type="password" name="password2">
+        </div>
+        <div class="memomemo">
+            <p>*... 「<,>,?」などの特殊文字は使用できません。</p>
+        </div>
+        <div class="erm_text">
+            <p><?php echo $erm ?></p>
+        </div>
+        <input type="submit" value="設定を反映する" class="button1" name="upd">
+        <input type="submit" value="キャンセル" class="button2" name="canc">
+    </form>
+</body>
+
+</html>
